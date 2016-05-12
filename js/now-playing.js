@@ -70,7 +70,7 @@ NowPlaying.prototype = {
             document.title = track.artist + " - " + track.name;
             }
         else {
-            $('#artist').html('<span class="separator">[silence]</span>');
+            $('#artist').html('<span class="separator"></span> <a>'+ "Silence" +'</a>');
             document.title = "Now Playing";
             }
         $('#track').html('<a target="linky" href="' + track.url + '">' + track.name + '</a>');
