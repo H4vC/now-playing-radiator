@@ -21,9 +21,9 @@ NowPlaying.prototype = {
     {
         if (track.artist == ' ') { // clear images
             $('#track-artwork img').hide();
-            $('body').css("background-color", "#999");
-            $('body').css("background-image", "");
-            $('#artwork').css("background-image", "");
+            //$('body').css("background-color", "#999");
+            //$('body').css("background-image", "");
+            //$('#artwork').css("background-image", "");
             $("#favicon").remove();
             $('<link id="favicon" rel="shortcut icon" href="images/favicon.ico" />').appendTo('head');
         }
@@ -39,14 +39,14 @@ NowPlaying.prototype = {
             // Check artwork
             if (track.artwork && track.artwork.length &&
                 track.artwork != this.lastArtwork) {
-                $('body').css("background-image", "url('" + track.artwork + "')");
-                $('#artwork').css("background-image", "url('" + track.artwork + "')");
+                //$('body').css("background-image", "url('" + track.artwork + "')");
+                //$('#artwork').css("background-image", "url('" + track.artwork + "')");
                 this.lastArtwork = track.artwork;
             }
             else {
-                $('body').css("background-color", dopplr(track.artist));
-                $('body').css("background-image", "");
-                $('#artwork').css("background-image", "");
+                //$('body').css("background-color", dopplr(track.artist));
+                //$('body').css("background-image", "");
+                //$('#artwork').css("background-image", "");
             }
 
             // Check favicon
@@ -91,8 +91,8 @@ NowPlaying.prototype = {
 
     display_artist_image: function(image)
     {
-        $('body').css("background-image", "url('" + image.image + "')");
-        this.lastArtwork = image.image;
+        //$('body').css("background-image", "url('" + image.image + "')");
+        //this.lastArtwork = image.image;
     },
 
     update: function()
