@@ -65,8 +65,9 @@ NowPlaying.prototype = {
             // var image = "http://ws.audioscrobbler.com/2.0/?method=artist.getimageredirect&artist=" + encodeURIComponent(track.artist) + "&api_key=5f134f063744307ee6f126ac2c480fab&size=original";
             // $('body').css("background-image", "url('" + image + "')");
         }
-        if (track.artist != ' ') {
+        if (track.artist != ' ' || track.title != ' ') {
             $('#artist').html('<span class="separator" style="color:#009bd5;">by </span> <a target="linky" href="http://last.fm/music/' + encodeURIComponent(track.artist) + '">' + track.artist + '</a>');
+            $('#track').html('<a target="linky" href="' + track.url + '">' + track.name + '</a>');
             document.title = track.artist + " - " + track.name;
             }
         else {
@@ -74,7 +75,6 @@ NowPlaying.prototype = {
             $('#track').html('<a> Silence </a>');
             document.title = "Now Playing";
             }
-        $('#track').html('<a target="linky" href="' + track.url + '">' + track.name + '</a>');
         if (track.artist && track.name)
             $('#lyrics').html('<a target="linky" href="http://lyrics.wikia.com/' + encodeURIComponent(track.artist) + ':' + encodeURIComponent(track.name) + '">Lyrics</a>');
         else
