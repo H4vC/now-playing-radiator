@@ -66,7 +66,7 @@ NowPlaying.prototype = {
             // $('body').css("background-image", "url('" + image + "')");
         }
         if (track.artist != ' ') {
-            $('#artist').html('<span class="separator" style="color:#009bd5;">by </span> <a target="linky" href="http://last.fm/music/' + encodeURIComponent(track.artist) + '">' + track.artist + '</a>');
+            $('#artist').html('<span class="separator">by </span> <a target="linky" href="http://last.fm/music/' + encodeURIComponent(track.artist) + '">' + track.artist + '</a>');
             $('#track').html('<a target="linky" href="' + track.url + '">' + track.name + '</a>');
             document.title = track.artist + " - " + track.name;
             }
